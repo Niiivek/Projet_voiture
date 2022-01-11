@@ -15,12 +15,12 @@ function [x_finint,y_finint,x_finext,y_finext] = lidar (pas_teta, r, XINIT,xt,yt
         [x_result2,y_result2]=polyxpoly(liste_x,liste_y,xt1,yt1);
         
         if size(x_result1,1) ~= 0
-        x_finint=[x_finint , x_result1(end)];
-        y_finint=[y_finint , y_result1(end)];
+        x_finint=[x_finint , x_result1(1)];
+        y_finint=[y_finint , y_result1(1)];
         end
         if size(x_result2,1) ~= 0
-        x_finext=[x_finext , x_result2(end)];
-        y_finext=[y_finext , y_result2(end)];
+        x_finext=[x_finext , x_result2(1)];
+        y_finext=[y_finext , y_result2(1)];
         end
 
         k=k+1;
