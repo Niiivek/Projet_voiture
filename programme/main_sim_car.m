@@ -2,7 +2,7 @@ clear all;
 close all;
 
 
-duree_simulation=85; %duree totale de simulation * secondes
+duree_simulation=80; %duree totale de simulation * secondes
 frequence_des_scannes=0.5; %lidar fait un scan tous les * secondes
 pas_de_tracage_figure=15000; %augmenter pour tracer moins d'instants
 angle_de_braquage=0.8; %+/-(droite et gauche) angle de braquage en degre
@@ -100,15 +100,13 @@ while T0<duree_simulation %simulation pour <-- secondes
     %changement d'angle de braquage
     intersect_ext=[intersect_ext moyext];
     intersect_int=[intersect_int moyint];
-    if (moyext/moyint>0.5 && moyext/moyint<2)
-       setenv("delta_f",string(0));
-    else 
+        
         if moyext>moyint
             setenv("delta_f",string(angle_de_braquage));
         else
             setenv("delta_f",string(-angle_de_braquage));
-      
-        end
+        %end
+        
     end
    
 
