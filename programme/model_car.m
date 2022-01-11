@@ -12,7 +12,6 @@ psidot=X(6); % dpsi/dt
 
 Vpsi=psidot;
 
-%définir les unités ????
 
 m=0.340; % masse du véhicule en Kg
 Cf=1000; % rigidité de dérive latérale avant en N/rad
@@ -42,7 +41,7 @@ Vydot=-Vx*Vpsi-2*Vy*(Cf+Cr)/(m*Vx) -2*Vpsi*(a*Cf-b*Cr)/(m*Vx)+2*Cf*deltaf/m; % a
 
 Vpsidot=-2*Vy*(a*Cf-b*Cr)/(Iz*Vx)-2*Vpsi*(a^2*Cf+b^2*Cr)/(Iz*Vx)+2*a*Cf*deltaf/Iz; % accélération angulaire de lacet
 
-%calcul de l'accélartion du centre de gravité dans le repère global
+%calcul de l'accéleration du centre de gravité dans le repère global
 
 V0=R*[Vxdot;Vydot];
 xddot=V0(1);
