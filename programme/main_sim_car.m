@@ -8,18 +8,20 @@ angle_de_braquage=0.9; %+/-(droite et gauche) angle de braquage en degre
 intersect_ext=[];
 intersect_int=[];
     %circuit 1
-    x_circuit_int=[50 50 150 450 650 650 450 650 650 200 50]/4;
-    y_circuit_int=[100 650 850 850 750 600 400 300 50 50 100]/4;
+    %x_circuit_int=[50 50 150 450 650 650 450 650 650 200 50]/4;
+    %y_circuit_int=[100 650 850 850 750 600 400 300 50 50 100]/4;
 
-    x_circuit_ext=[200 200 200 500 500 300 300 500 200]/4;
-    y_circuit_ext=[200 350 650 700 600 500 300 200 200]/4;
+    %x_circuit_ext=[200 200 200 500 500 300 300 500 200]/4;
+    %y_circuit_ext=[200 350 650 700 600 500 300 200 200]/4;
 
     %circuit 2
-    %x_circuit_ext = [-130 -110 40 100 100 -30 -130]; %mapshow relis les points deux à deux, il faut terminer par le premier pour bien fermer le circuit
-    %y_circuit_ext = [-50 10 90 0 -110 -130 -50];
+    x_circuit_ext = [-130 -110 40 100 100 -30 -130]; %mapshow relis les points deux à deux, il faut terminer par le premier pour bien fermer le circuit
+    y_circuit_ext = [-50 10 90 0 -110 -130 -50];
 
-    %x_circuit_int =[-180 -160 40 150 150 -80 -180];
-    %y_circuit_int = [-50 10 140 0 -160 -180 -50];
+    x_circuit_int =[-180 -160 40 150 150 -80 -180];
+    y_circuit_int = [-50 10 140 0 -160 -180 -50];
+
+   
     mapshow(x_circuit_ext,y_circuit_ext,'Marker','*')
     mapshow(x_circuit_int,y_circuit_int,'Marker','+')
 
@@ -28,12 +30,13 @@ intersect_int=[];
 
 % conditions initiales du véhicule en positions et vitesses
 %circuit 1
-xinit=25; % en m
-yinit=32.5; % en m
+%xinit=25; % en m
+%yinit=32.5; % en m
 
 %circuit 2
-%xinit=-100; % en m
-%yinit=-130; % en m
+xinit=-100; % en m
+yinit=-130; % en m
+
 psiinit=pi/2; % en rad
 
 xdotinit=0; % en m/s
@@ -109,15 +112,15 @@ portee_lidar=40;
 
 % AFFICHAGE et ANIMATION
 
-taille = 2; 
+taille = 2;
 for i=1:pas_de_tracage_figure:size(TOUT) 
         
         %clf(); % reinitialiser le dessin.
         hold on;  
         %circuit 1
-        axis([0 250 0 250]);
+        %axis([0 250 0 250]);
         %circuit 2
-        %axis([-200 200 -200 200]);
+        axis([-200 200 -200 200]);
         axis square;
 
         % Tracer la position du robot
