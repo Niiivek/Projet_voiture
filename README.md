@@ -8,4 +8,7 @@ Le modèle de simulation nécessite également la construction d’un modèle de
 Un modèle de simulation du capteur a été développé pour rendre compte de l’environnement local du robot.
 Pour finir, nous avons proposé un stratégie de commande qui permet d’ajuster l’angle de braquage en fonction de l’environnement local et la configuration du robot sur le circuit.
 Ces différents modules ont été développés sous Matlab. Les résultats sont illustrés à travers des animations graphiques et des courbes indispensables pour l’analyse et l’optimisation des différents paramètres de la course.
+
+
+
 <img width="565" alt="Capture d’écran 2023-03-06 à 16 59 07" src="https://user-images.githubusercontent.com/92987183/223163462-fd52b433-7a70-4566-8657-370f3b22db01.png">
